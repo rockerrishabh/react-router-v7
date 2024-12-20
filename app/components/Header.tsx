@@ -11,12 +11,28 @@ function Header() {
       <nav>
         <ul className="flex gap-4 items-center">
           <li>
-            <NavLink className={"active:text-blue-500"} to="/about">
+            <NavLink
+              className={({ isActive, isPending, isTransitioning }) =>
+                [
+                  isPending ? "pending" : "",
+                  isActive && "text-blue-500",
+                  isTransitioning ? "transitioning" : "",
+                ].join(" ")
+              }
+              to="/about">
               About
             </NavLink>
           </li>
           <li>
-            <NavLink className={"active:text-blue-500"} to="/contact">
+            <NavLink
+              className={({ isActive, isPending, isTransitioning }) =>
+                [
+                  isPending ? "pending" : "",
+                  isActive && "text-blue-500",
+                  isTransitioning ? "transitioning" : "",
+                ].join(" ")
+              }
+              to="/contact">
               Contact
             </NavLink>
           </li>
