@@ -7,6 +7,6 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export default function Home() {
-  return <main>Hello, World!</main>;
+export default function About() {
+  return <main>Hello About!</main>;
 }
